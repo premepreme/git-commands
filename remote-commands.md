@@ -1,19 +1,14 @@
 ## Commands for Remotes
 
-> TODO Write your answers and then remove **all** the TODO comments
-> TODO For answers that are git or shell commands, surround your answer in triple backquotes, like this:
-   ```
-   this is unformatted text
-   delete this example
-   ```
-
 1. List all your remote repositories and show their URLs:
    ```
-   TODO write the git command for this
+   git remote -v
    ```
 
 2. View details about a remote repo named `origin`, including all the remote branches and local tracking branches for `origin`:
-
+   ```
+   git remote show origin
+   ```
 
 3. (Pushing a new branch) You commit some files to the `dev-foo` branch and try to "push" them to Github, but it fails as shown here:
 
@@ -61,11 +56,11 @@
 
 8. To create a *second* remote repository for your local repo, the command to add a remote named "bitbucket" with the URL "https://bitbucket.org/your-username/git-commands" is:
    ```
-   todo your answer
+   git add remote bitbucket https://bitbucket.org/your-username/git-commands
    ```
    - Note: you must **create** an empty repo on Bitbucket. This command just adds it as a remote, it won't create the remote repo.
 
 
 9. After adding the remote named `bitbucket`, the command to push your master branch to `bitbucket` is:
-
+ ```git push bitbucket master```
 

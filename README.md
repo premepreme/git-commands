@@ -1,3 +1,6 @@
+# Quick Guide to Git
+By Ratthicha 
+
 ## Using Git
 
 [Basics](#basics)    
