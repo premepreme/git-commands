@@ -19,18 +19,19 @@
    fatal:  The current branch dev-foo has no upstream branch. 
    ```
    Explain this error.
-   > TODO Since you are writing an explanation (not shell commands), write your answer in lines beginning with `>` like this one. The text will be formatted and may include Markdown.
+   > Because you have not configured which branch do you want to push to.
 
 
 4. The command to push `dev-foo` to `origin` as a **new remote branch** on `origin` is:
-
+   ```
+   git push -u origin dev-foo
+   ```
 
 
 5. (Create a local tracking branch for a remote branch) The remote repository (`origin`) has a branch named `e2e-test` that you don't have in your local repository.   
    The command to create a new local branch as a copy of the remote `e2e-test` branch that **tracks** the remote branch is:
    ```
-   TODO There are many commands that will do this.
-   You may write one or more than one.
+   git pull origin e2e-test
    ```
 
 6. Consider this situation:
@@ -41,12 +42,16 @@
    
    What happens when you `push` your changes?    
    Explain why and how to fix it.
+   > The error message will show up. Because READ.md that on the local machine isn't up-to-date.(not the same as README.md in github)
+   The way to fix it are "git fetch" downloads changes from origin
+(Github).Then use "git merge" to automatically merge branches.
+cmd> git merge --no-commit
 
 
 
 7. The command to change the URL of the remote "origin" to a new URL, such as `https://hostname/newuser/new-repo-name`, is:
    ```
-   TODO your answer
+   git remote set-https://hostname/newuser/new-repo-name
    ```
    This situation occurs when:
    - you change the name of a repo on Github
@@ -63,5 +68,7 @@
 
 
 9. After adding the remote named `bitbucket`, the command to push your master branch to `bitbucket` is:
- ```git push bitbucket master```
+    ```
+   git push bitbucket master
+    ```
 
